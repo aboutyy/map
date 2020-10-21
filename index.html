@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="出行大数据研究">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Page-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+    <script src="js/china.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <meta name="generator" content="Nicepage 2.28.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <meta property="og:title" content="Page 1">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-align-left u-clearfix u-header u-header" id="sec-6128"><div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-1">出行大数据研究</h2>
+        <img src="images/1.png" alt="" class="u-image u-image-default u-image-1" data-image-width="324" data-image-height="107">
+        <p class="u-text u-text-default u-text-2">智慧城市研究院</p>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-ee64">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-30 u-layout-cell-1" src="">
+                    <div  id="first" class="u-container-layout u-valign-middle u-container-layout-1"></div>
+                  </div>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-30 u-layout-cell-2">
+                    <div id="second" class="u-container-layout u-container-layout-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                    <div id="third" class="u-container-layout u-container-layout-3"></div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-30 u-layout-cell-4" src="">
+                    <div id="fourth" class="u-container-layout u-valign-middle u-container-layout-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script type="text/javascript">
+    var firstChart = echarts.init(document.getElementById('first'));
+    var secondChart = echarts.init(document.getElementById("second"));
+    var thirdChart = echarts.init(document.getElementById('third'));
+    var fourthChart = echarts.init(document.getElementById("fourth"));
+    var geoCoordMap = {
+        '阿坝藏族羌族自治州': [102.6106, 32.3948],
+        '阿克苏地区': [81.6373, 40.9537],
+        '阿拉善盟': [102.5017, 40.4932],
+        '阿勒泰地区': [88.4262, 46.8934],
+        '阿里地区': [82.6904, 32.9029],
+        '安康': [108.9291, 32.7561],
+        '安庆': [116.594, 30.6097],
+        '安顺': [105.95, 25.994],
+        '安阳': [114.3547, 35.877],
+        '鞍山': [123.0146, 40.7129],
+        '巴彦淖尔': [107.5673, 41.4411],
+        '巴音郭楞蒙古自治州': [87.5078, 39.4572],
+        '巴中': [107.0369, 32.0181],
+        '白城': [123.0098, 45.3422],
+        '白山': [127.2855, 42.0674],
+        '白银': [104.6268, 36.6118],
+        '百色': [106.2902, 23.9859],
+        '蚌埠': [117.3257, 33.109],
+        '包头': [110.2605, 41.5484],
+        '宝鸡': [107.2016, 34.3782],
+        '保定': [115.1702, 39.0204],
+        '保山': [98.972, 24.9769],
+        '北海': [109.3321, 21.6777],
+        '北京': [116.4108, 40.1841],
+        '本溪': [124.5691, 41.2301],
+        '毕节': [105.2136, 27.0694],
+        '滨州': [117.827, 37.4989],
+        '亳州': [116.1825, 33.4353],
+        '博尔塔拉蒙古自治州': [82.2034, 44.7432],
+        '沧州': [116.7466, 38.2652],
+        '昌都': [97.0468, 30.7766],
+        '昌吉回族自治州': [88.6179, 44.351],
+        '常德': [111.5228, 29.2984],
+        '常州': [119.6366, 31.6256],
+        '朝阳': [120.0124, 41.5097],
+        '潮州': [116.772, 23.7964],
+        '郴州': [113.1359, 25.815],
+        '成都': [103.8224, 30.7021],
+        '承德': [117.552, 41.3446],
+        '池州': [117.3638, 30.2843],
+        '赤峰': [118.8918, 43.2017],
+        '崇左': [107.2735, 22.5034],
+        '滁州': [118.1027, 32.5444],
+        '楚雄彝族自治州': [101.5679, 25.3509],
+        '达州': [107.6414, 31.3648],
+        '大理白族自治州': [100.0405, 25.7275],
+        '大连': [122.2134, 39.6012],
+        '大庆': [124.7011, 46.3422],
+        '大同': [113.7221, 39.8988],
+        '大兴安岭地区': [124.2191, 52.3223],
+        '丹东': [124.4022, 40.5455],
+        '德宏傣族景颇族自治州': [98.0853, 24.559],
+        '德阳': [104.4367, 31.1302],
+        '德州': [116.6443, 37.2469],
+        '迪庆藏族自治州': [99.4414, 27.9558],
+        '定西': [104.453, 35.1178],
+        '东莞': [113.8758, 22.9358],
+        '东营': [118.6053, 37.6152],
+        '鄂尔多斯': [108.6242, 39.4083],
+        '鄂州': [114.755, 30.3266],
+        '恩施土家族苗族自治州': [109.5466, 30.1913],
+        '防城港': [107.9941, 21.8795],
+        '佛山': [112.9458, 23.0079],
+        '福州': [119.1766, 26.053],
+        '抚顺': [124.6551, 41.8337],
+        '抚州': [116.4336, 27.5084],
+        '阜新': [121.9536, 42.2792],
+        '阜阳': [115.7052, 32.9173],
+        '甘南藏族自治州': [102.7614, 34.323],
+        '甘孜藏族自治州': [100.0211, 30.9356],
+        '赣州': [115.2704, 25.7083],
+        '固原': [106.1814, 35.9525],
+        '广安': [106.6629, 30.4273],
+        '广元': [105.7812, 32.2616],
+        '广州': [113.5357, 23.3488],
+        '贵港': [109.9972, 23.3083],
+        '贵阳': [106.7058, 26.8418],
+        '桂林': [110.5133, 25.3534],
+        '果洛藏族自治州': [99.4363, 34.1119],
+        '哈尔滨': [127.9527, 45.6343],
+        '哈密地区': [93.4865, 43.0113],
+        '海北藏族自治州': [100.3138, 37.7596],
+        '海东': [102.3449, 36.3312],
+        '海口': [110.2608, 20.0128],
+        '海南藏族自治州': [100.2536, 35.9023],
+        '海南省直辖县级行政单位': [109.7118, 19.1516],
+        '海西蒙古族藏族自治州': [94.5006, 36.7133],
+        '邯郸': [114.5422, 36.5533],
+        '汉中': [107.1029, 33.0914],
+        '杭州': [119.468, 29.9002],
+        '合肥': [117.3565, 31.7623],
+        '和田地区': [81.0074, 37.084],
+        '河池': [107.8418, 24.6432],
+        '河源': [114.9581, 24.0446],
+        '菏泽': [115.6912, 35.1507],
+        '贺州': [111.3621, 24.3602],
+        '鹤壁': [114.3099, 35.7211],
+        '鹤岗': [130.8012, 47.639],
+        '黑河': [126.9941, 49.2539],
+        '衡水': [115.824, 37.7611],
+        '衡阳': [112.5737, 26.7942],
+        '红河哈尼族彝族自治州': [103.0339, 23.4403],
+        '呼和浩特': [111.5, 40.5884],
+        '呼伦贝尔': [121.1601, 49.6394],
+        '葫芦岛': [120.1927, 40.6244],
+        '湖北省直辖县级行政单位': [112.2873, 30.8037],
+        '湖州': [119.8684, 30.7447],
+        '怀化': [110.0709, 27.5451],
+        '淮安': [118.9609, 33.3533],
+        '淮北': [116.7437, 33.7278],
+        '淮南': [116.7846, 32.7138],
+        '黄冈': [115.3419, 30.7145],
+        '黄南藏族自治州': [101.6239, 35.0249],
+        '黄山': [118.0715, 29.9068],
+        '黄石': [115.025, 29.9271],
+        '惠州': [114.4991, 23.2437],
+        '鸡西': [132.2777, 45.6293],
+        '吉安': [114.8227, 26.9727],
+        '吉林': [126.8428, 43.5763],
+        '济南': [117.0876, 36.7376],
+        '济宁': [116.7329, 35.3749],
+        '佳木斯': [132.2345, 47.2681],
+        '嘉兴': [120.7537, 30.6422],
+        '嘉峪关': [98.1998, 39.823],
+        '江门': [112.6697, 22.2848],
+        '焦作': [112.8886, 35.1122],
+        '揭阳': [116.118, 23.3366],
+        '金昌': [102.0593, 38.4404],
+        '金华': [119.9522, 29.1168],
+        '锦州': [121.6171, 41.4726],
+        '晋城': [112.7071, 35.6107],
+        '晋中': [112.9584, 37.327],
+        '荆门': [112.6075, 31.0687],
+        '荆州': [112.5711, 29.9973],
+        '景德镇': [117.2709, 29.3073],
+        '九江': [115.4445, 29.3241],
+        '酒泉': [96.0507, 40.258],
+        '喀什地区': [77.4491, 38.1904],
+        '开封': [114.5345, 34.6051],
+        '克拉玛依': [85.22, 45.4647],
+        '克孜勒苏柯尔克孜自治州': [76.3397, 39.7255],
+        '昆明': [102.8724, 25.3863],
+        '拉萨': [91.0909, 30.034],
+        '来宾': [109.4122, 23.8554],
+        '莱芜': [117.6613, 36.2735],
+        '兰州': [103.6435, 36.3538],
+        '廊坊': [116.6259, 39.2574],
+        '乐山': [103.5697, 29.2159],
+        '丽江': [100.5241, 26.9403],
+        '丽水': [119.5114, 28.1991],
+        '连云港': [119.1323, 34.5303],
+        '凉山彝族自治州': [102.0814, 27.8868],
+        '辽阳': [123.2453, 41.1815],
+        '辽源': [125.3057, 42.8103],
+        '聊城': [115.8788, 36.4577],
+        '林芝': [95.2528, 29.2005],
+        '临沧': [99.6719, 23.9395],
+        '临汾': [111.3785, 36.226],
+        '临夏回族自治州': [103.2857, 35.6263],
+        '临沂': [118.2807, 35.308],
+        '柳州': [109.3718, 24.9469],
+        '六安': [116.314, 31.7554],
+        '六盘水': [104.89, 26.1342],
+        '龙岩': [116.7397, 25.2929],
+        '陇南': [105.2197, 33.596],
+        '娄底': [111.6149, 27.7395],
+        '泸州': [105.6665, 28.4391],
+        '洛阳': [112.0287, 34.2896],
+        '漯河': [113.8992, 33.6556],
+        '吕梁': [111.2621, 37.6761],
+        '马鞍山': [118.3579, 31.628],
+        '茂名': [110.9492, 22.0155],
+        '眉山': [103.7506, 29.9277],
+        '梅州': [116.0792, 24.2023],
+        '绵阳': [104.7057, 31.8478],
+        '牡丹江': [129.8898, 44.5925],
+        '那曲地区': [89.3042, 32.7342],
+        '南昌': [116.0215, 28.6499],
+        '南充': [106.2028, 31.1959],
+        '南京': [118.8432, 31.9267],
+        '南宁': [108.4644, 23.0576],
+        '南平': [118.1428, 27.3388],
+        '南通': [121.0107, 32.1788],
+        '南阳': [112.2863, 33.0436],
+        '内江': [104.9105, 29.6411],
+        '宁波': [121.4759, 29.7072],
+        '宁德': [119.4747, 26.975],
+        '怒江傈僳族自治州': [98.8725, 26.9563],
+        '攀枝花': [101.7308, 26.8064],
+        '盘锦': [122.0058, 41.0939],
+        '平顶山': [113.0123, 33.7955],
+        '平凉': [106.6496, 35.3079],
+        '萍乡': [113.9027, 27.5121],
+        '莆田': [118.8874, 25.4537],
+        '濮阳': [115.282, 35.8088],
+        '普洱': [100.7186, 23.1859],
+        '七台河': [130.9721, 45.9113],
+        '齐齐哈尔': [124.5336, 47.6964],
+        '黔东南苗族侗族自治州': [108.5592, 26.5051],
+        '黔南布依族苗族自治州': [107.2505, 26.0124],
+        '黔西南布依族苗族自治州': [105.464, 25.2658],
+        '钦州': [109.0251, 22.1859],
+        '秦皇岛': [119.1835, 40.0897],
+        '青岛': [120.1401, 36.456],
+        '清远': [112.8774, 24.3145],
+        '庆阳': [107.593, 36.1613],
+        '衢州': [118.6747, 28.9341],
+        '曲靖': [103.9395, 25.7009],
+        '泉州': [118.2562, 25.2025],
+        '日喀则': [86.6224, 29.5167],
+        '日照': [119.1341, 35.5842],
+        '三门峡': [111.1046, 34.3588],
+        '三明': [117.3981, 26.2995],
+        '三沙': [109.4039, 19.5676],
+        '三亚': [110.1667, 19.1473],
+        '厦门': [118.1153, 24.682],
+        '山南地区': [92.2768, 28.3006],
+        '汕头': [116.5818, 23.3335],
+        '汕尾': [115.5336, 23.0164],
+        '商洛': [109.9005, 33.6476],
+        '商丘': [115.7001, 34.2888],
+        '上海': [121.4463, 31.2355],
+        '上饶': [117.4719, 28.7744],
+        '韶关': [113.775, 24.8205],
+        '邵阳': [110.8727, 26.9137],
+        '绍兴': [120.6362, 29.7334],
+        '深圳': [114.1261, 22.6297],
+        '沈阳': [123.1376, 42.0935],
+        '十堰': [110.4401, 32.4561],
+        '石河子': [86.0513, 44.3032],
+        '石家庄': [114.4406, 38.1311],
+        '石嘴山': [106.5124, 39.0076],
+        '双鸭山': [132.5344, 46.6804],
+        '朔州': [112.6411, 39.6172],
+        '四平': [124.4699, 43.5699],
+        '松原': [124.4714, 44.799],
+        '苏州': [120.65, 31.3799],
+        '绥化': [126.6355, 46.8905],
+        '随州': [113.424, 31.8282],
+        '遂宁': [105.4716, 30.6319],
+        '塔城地区': [84.8158, 45.6135],
+        '台州': [121.1031, 28.7773],
+        '太原': [112.3153, 37.9593],
+        '泰安': [117.0258, 36.0016],
+        '泰州': [120.0586, 32.5687],
+        '唐山': [118.3268, 39.7434],
+        '天津': [117.3198, 39.3058],
+        '天水': [105.7391, 34.6484],
+        '铁岭': [124.1713, 42.6429],
+        '通化': [125.9491, 41.9514],
+        '通辽': [121.5815, 43.8102],
+        '铜川': [109.032, 35.1968],
+        '铜陵': [117.8953, 30.9451],
+        '铜仁': [108.542, 27.9712],
+        '吐鲁番': [89.7948, 42.3933],
+        '威海': [121.9809, 37.1222],
+        '潍坊': [119.0719, 36.54],
+        '渭南': [109.8518, 34.9503],
+        '温州': [120.4334, 27.9037],
+        '文山壮族苗族自治州': [104.714, 23.6896],
+        '乌海': [106.8959, 39.4277],
+        '乌兰察布': [112.4556, 41.6809],
+        '乌鲁木齐': [87.7808, 43.7259],
+        '无锡': [120.0751, 31.527],
+        '芜湖': [118.1288, 31.15],
+        '吴忠': [106.5382, 37.4615],
+        '梧州': [110.9903, 23.481],
+        '武汉': [114.3417, 30.6232],
+        '武威': [103.0593, 38.165],
+        '西安': [108.7896, 34.1073],
+        '西宁': [101.4377, 36.8279],
+        '西双版纳傣族自治州': [100.9447, 21.9309],
+        '锡林郭勒盟': [115.4636, 44.1852],
+        '咸宁': [114.1751, 29.6238],
+        '咸阳': [108.3923, 34.7858],
+        '湘潭': [112.6027, 27.7322],
+        '湘西土家族苗族自治州': [109.7269, 28.6935],
+        '襄阳': [111.9349, 31.931],
+        '孝感': [113.8747, 31.1141],
+        '忻州': [112.4073, 38.8831],
+        '新乡': [114.0859, 35.2643],
+        '新余': [114.8515, 27.8452],
+        '信阳': [114.8835, 32.082],
+        '邢台': [114.8151, 37.2128],
+        '兴安盟': [121.349, 46.2224],
+        '宿迁': [118.5189, 33.7832],
+        '宿州': [117.2138, 33.8584],
+        '徐州': [117.5162, 34.3579],
+        '许昌': [113.7091, 34.0726],
+        '宣城': [118.8511, 30.6863],
+        '雅安': [102.6621, 29.9136],
+        '烟台': [120.8044, 37.2409],
+        '延安': [109.3171, 36.4357],
+        '延边朝鲜族自治州': [129.1234, 43.1412],
+        '盐城': [120.1637, 33.524],
+        '扬州': [119.4732, 32.7375],
+        '阳江': [111.7717, 22.0403],
+        '阳泉': [113.4978, 38.0637],
+        '伊春': [129.2026, 47.8019],
+        '伊犁哈萨克自治州': [82.1763, 43.4542],
+        '宜宾': [104.6354, 28.5732],
+        '宜昌': [111.1344, 30.7465],
+        '宜春': [114.9728, 28.3064],
+        '益阳': [111.9479, 28.5747],
+        '银川': [106.351, 38.2348],
+        '鹰潭': [117.1081, 28.2239],
+        '营口': [122.4667, 40.3909],
+        '永州': [111.7295, 25.7729],
+        '榆林': [109.5556, 38.0366],
+        '玉林': [110.1803, 22.4415],
+        '玉树藏族自治州': [94.3488, 34.2133],
+        '玉溪': [102.2012, 24.1401],
+        '岳阳': [113.2555, 29.0655],
+        '云浮': [111.7942, 22.8164],
+        '运城': [111.0664, 35.1848],
+        '枣庄': [117.3929, 34.9156],
+        '湛江': [110.163, 21.0964],
+        '张家界': [110.5265, 29.3937],
+        '张家口': [115.031, 40.8602],
+        '张掖': [99.8355, 38.9568],
+        '漳州': [117.441, 24.3694],
+        '长春': [125.7637, 44.3815],
+        '长沙': [113.1526, 28.2288],
+        '长治': [112.9172, 36.4751],
+        '昭通': [103.9998, 27.6539],
+        '肇庆': [112.2054, 23.5393],
+        '镇江': [119.4532, 32.0163],
+        '郑州': [113.4669, 34.63],
+        '中山': [113.382, 22.5215],
+        '中卫': [105.469, 37.0421],
+        '重庆': [107.8633, 30.0559],
+        '舟山': [122.1871, 30.0856],
+        '周口': [114.8776, 33.7222],
+        '珠海': [113.3254, 22.1827],
+        '株洲': [113.5183, 27.1189],
+        '驻马店': [114.1512, 32.9239],
+        '资阳': [104.9525, 30.1813],
+        '淄博': [118.0547, 36.6082],
+        '自贡': [104.684, 29.2868],
+        '遵义': [107.0844, 28.1678]
+    };
+//节假日出发
+    var BJData1 = [
+        [{name:'北京'}, {name:'北京',value:282606}],
+        [{name:'北京'}, {name:'廊坊',value:103684}],
+        [{name:'北京'}, {name:'天津',value:55057}],
+        [{name:'北京'}, {name:'保定',value:50704}],
+        [{name:'北京'}, {name:'张家口',value:22890}],
+        [{name:'北京'}, {name:'承德',value:16870}],
+        [{name:'北京'}, {name:'唐山',value:10368}],
+        [{name:'北京'}, {name:'石家庄',value:8484}],
+        [{name:'北京'}, {name:'秦皇岛',value:7391}],
+        [{name:'北京'}, {name:'沧州',value:7152}],
+        [{name:'北京'}, {name:'邯郸',value:4319}],
+    ];
+    var SHData1 = [
+        [{name:'上海'}, {name:'上海',value:170558.03}],
+        [{name:'上海'}, {name:'苏州',value:84122}],
+        [{name:'上海'}, {name:'嘉兴',value:24723}],
+        [{name:'上海'}, {name:'杭州',value:16731}],
+        [{name:'上海'}, {name:'南通',value:14474}],
+        [{name:'上海'}, {name:'无锡',value:8986}],
+        [{name:'上海'}, {name:'宁波',value:6555}],
+        [{name:'上海'}, {name:'南京',value:6145}],
+        [{name:'上海'}, {name:'湖州',value:4966}],
+        [{name:'上海'}, {name:'绍兴',value:3853}],
+        [{name:'上海'}, {name:'常州',value:3694}]
+    ];
+    var GZData1 = [
+        [{name:'广州'},{name:'广州',value:141746}],
+        [{name:'广州'}, {name:'佛山',value:65934}],
+        [{name:'广州'}, {name:'东莞',value:22725}],
+        [{name:'广州'}, {name:'深圳',value:15888}],
+        [{name:'广州'}, {name:'清远',value:10339}],
+        [{name:'广州'}, {name:'惠州',value:9244}],
+        [{name:'广州'}, {name:'中山',value:5490}],
+        [{name:'广州'}, {name:'肇庆',value:4135}],
+        [{name:'广州'}, {name:'珠海',value:4052}],
+        [{name:'广州'}, {name:'江门',value:3934}],
+        [{name:'广州'}, {name:'韶关',value:3366}]
+    ];
+    var CDData1 = [
+        [{name:'成都'}, {name:'成都',value:73616}],
+        [{name:'成都'}, {name:'资阳',value:12196}],
+        [{name:'成都'}, {name:'德阳',value:11557}],
+        [{name:'成都'}, {name:'眉山',value:11400}],
+        [{name:'成都'}, {name:'重庆',value:9978}],
+        [{name:'成都'}, {name:'乐山',value:7957}],
+        [{name:'成都'}, {name:'绵阳',value:6547}],
+        [{name:'成都'}, {name:'南充',value:5134}],
+        [{name:'成都'}, {name:'雅安',value:4911}],
+        [{name:'成都'}, {name:'内江',value:3936}],
+        [{name:'成都'}, {name:'阿坝藏族羌族自治州',value:3745}],
+    ];
+    var WHData1 = [
+        [{name:'武汉'}, {name:'武汉',value:108421}],
+        [{name:'武汉'}, {name:'黄冈',value:25371}],
+        [{name:'武汉'}, {name:'孝感',value:24983}],
+        [{name:'武汉'}, {name:'恩施土家族苗族自治州',value:11725}],
+        [{name:'武汉'}, {name:'咸宁',value:10709}],
+        [{name:'武汉'}, {name:'鄂州',value:9526}],
+        [{name:'武汉'}, {name:'荆州',value:8841}],
+        [{name:'武汉'}, {name:'黄石',value:6017}],
+        [{name:'武汉'}, {name:'襄阳',value:5723}],
+        [{name:'武汉'}, {name:'宜昌',value:5526}],
+        [{name:'武汉'}, {name:'荆门',value:5435}],
+    ];
+//平日出发
+    var BJData2 = [
+        [{name:'北京'}, {name:'北京',value:192493}],
+        [{name:'北京'}, {name:'廊坊',value:93816}],
+        [{name:'北京'}, {name:'天津',value:28387}],
+        [{name:'北京'}, {name:'保定',value:27580}],
+        [{name:'北京'}, {name:'张家口',value:13091}],
+        [{name:'北京'}, {name:'承德',value:8878}],
+        [{name:'北京'}, {name:'唐山',value:6865}],
+        [{name:'北京'}, {name:'石家庄',value:5344}],
+        [{name:'北京'}, {name:'秦皇岛',value:4954}],
+        [{name:'北京'}, {name:'沧州',value:3578}],
+        [{name:'北京'}, {name:'上海',value:3270}],
+    ]
+    var SHData2 = [
+        [{name:'上海'}, {name:'上海',value:110561}],
+        [{name:'上海'}, {name:'苏州',value:73788}],
+        [{name:'上海'}, {name:'嘉兴',value:11113}],
+        [{name:'上海'}, {name:'杭州',value:6346}],
+        [{name:'上海'}, {name:'南通',value:5886}],
+        [{name:'上海'}, {name:'无锡',value:3894}],
+        [{name:'上海'}, {name:'南京',value:3198}],
+        [{name:'上海'}, {name:'北京',value:2687}],
+        [{name:'上海'}, {name:'宁波',value:1968}],
+        [{name:'上海'}, {name:'常州',value:1681}],
+        [{name:'上海'}, {name:'舟山',value:1476}],
+
+    ];
+    var GZData2 = [
+        [{name:'广州'},{name:'广州',value:150342}],
+        [{name:'广州'}, {name:'佛山',value:77444}],
+        [{name:'广州'}, {name:'东莞',value:21777}],
+        [{name:'广州'}, {name:'深圳',value:16094}],
+        [{name:'广州'}, {name:'清远',value:10747}],
+        [{name:'广州'}, {name:'惠州',value:6745}],
+        [{name:'广州'}, {name:'中山',value:5793}],
+        [{name:'广州'}, {name:'肇庆',value:4904}],
+        [{name:'广州'}, {name:'江门',value:3466}],
+        [{name:'广州'}, {name:'珠海',value:3372}],
+        [{name:'广州'}, {name:'韶关',value:2264}],
+    ];
+    var CDData2 = [
+        [{name:'成都'}, {name:'成都',value:47322}],
+        [{name:'成都'}, {name:'德阳',value:10557}],
+        [{name:'成都'}, {name:'眉山',value:8473}],
+        [{name:'成都'}, {name:'资阳',value:7693}],
+        [{name:'成都'}, {name:'重庆',value:5095}],
+        [{name:'成都'}, {name:'绵阳',value:4415}],
+        [{name:'成都'}, {name:'乐山',value:4286}],
+        [{name:'成都'}, {name:'南充',value:2659}],
+        [{name:'成都'}, {name:'内江',value:2117}],
+        [{name:'成都'}, {name:'遂宁',value:2027}],
+        [{name:'成都'}, {name:'雅安',value:1984}],
+    ];
+    var WHData2 = [
+        [{name:'武汉'}, {name:'武汉',value:42506}],
+        [{name:'武汉'}, {name:'孝感',value:9012}],
+        [{name:'武汉'}, {name:'咸宁',value:8521}],
+        [{name:'武汉'}, {name:'黄冈',value:7670}],
+        [{name:'武汉'}, {name:'鄂州',value:5954}],
+        [{name:'武汉'}, {name:'恩施土家族苗族自治州',value:3710}],
+        [{name:'武汉'}, {name:'黄石',value:2514}],
+        [{name:'武汉'}, {name:'荆州',value:2393}],
+        [{name:'武汉'}, {name:'宜昌',value:1369}],
+        [{name:'武汉'}, {name:'襄阳',value:1363}],
+        [{name:'武汉'}, {name:'随州',value:1195}],
+    ];
+
+//节假日到达
+    var BJData3 = [
+        [{name:'北京'}, {name:'北京',value:357850}],
+        [{name:'廊坊'}, {name:'北京',value:124764}],
+        [{name:'天津'}, {name:'北京',value:69841}],
+        [{name:'保定'}, {name:'北京',value:68477}],
+        [{name:'张家口'}, {name:'北京',value:30488}],
+        [{name:'承德'}, {name:'北京',value:21230}],
+        [{name:'唐山'}, {name:'北京',value:14131}],
+        [{name:'石家庄'}, {name:'北京',value:11369}],
+        [{name:'沧州'}, {name:'北京',value:9622}],
+        [{name:'秦皇岛'}, {name:'北京',value:7928}],
+        [{name:'邯郸'}, {name:'北京',value:7461}],
+    ]
+    var SHData3 = [
+        [{name:'上海'}, {name:'上海',value:200141}],
+        [{name:'苏州'}, {name:'上海',value:102148}],
+        [{name:'嘉兴'}, {name:'上海',value:28846}],
+        [{name:'南通'}, {name:'上海',value:18947}],
+        [{name:'杭州'}, {name:'上海',value:17028}],
+        [{name:'无锡'}, {name:'上海',value:10312}],
+        [{name:'宁波'}, {name:'上海',value:7097}],
+        [{name:'南京'}, {name:'上海',value:6017}],
+        [{name:'湖州'}, {name:'上海',value:5263}],
+        [{name:'常州'}, {name:'上海',value:4483}],
+        [{name:'绍兴'}, {name:'上海',value:4233}],
+    ];
+    var GZData3 = [
+        [{name:'广州'},{name:'广州',value:186347}],
+        [{name:'佛山'}, {name:'广州',value:101467}],
+        [{name:'东莞'}, {name:'广州',value:26357}],
+        [{name:'深圳'}, {name:'广州',value:16709}],
+        [{name:'惠州'}, {name:'广州',value:11497}],
+        [{name:'清远'}, {name:'广州',value:10932}],
+        [{name:'中山'}, {name:'广州',value:6255}],
+        [{name:'肇庆'}, {name:'广州',value:4484}],
+        [{name:'江门'}, {name:'广州',value:4353}],
+        [{name:'韶关'}, {name:'广州',value:4293}],
+        [{name:'珠海'}, {name:'广州',value:3806}],
+
+    ];
+    var CDData3 = [
+        [{name:'成都'}, {name:'成都',value:91112}],
+        [{name:'德阳'}, {name:'成都',value:16693}],
+        [{name:'资阳'}, {name:'成都',value:15280}],
+        [{name:'眉山'}, {name:'成都',value:14923}],
+        [{name:'重庆'}, {name:'成都',value:10301}],
+        [{name:'乐山'}, {name:'成都',value:8370}],
+        [{name:'绵阳'}, {name:'成都',value:8325}],
+        [{name:'南充'}, {name:'成都',value:6781}],
+        [{name:'雅安'}, {name:'成都',value:5510}],
+        [{name:'内江'}, {name:'成都',value:4929}],
+        [{name:'阿坝藏族羌族自治州'}, {name:'成都',value:4253}],
+    ];
+    var WHData3 = [
+        [{name:'武汉'}, {name:'武汉',value:149934}],
+        [{name:'孝感'}, {name:'武汉',value:35017}],
+        [{name:'黄冈'}, {name:'武汉',value:33712}],
+        [{name:'恩施土家族苗族自治州'}, {name:'武汉',value:16927}],
+        [{name:'鄂州'}, {name:'武汉',value:15620}],
+        [{name:'咸宁'}, {name:'武汉',value:14205}],
+        [{name:'荆州'}, {name:'武汉',value:12534}],
+        [{name:'黄石'}, {name:'武汉',value:7674}],
+        [{name:'荆门'}, {name:'武汉',value:7651}],
+        [{name:'襄阳'}, {name:'武汉',value:6594}],
+        [{name:'随州'}, {name:'武汉',value:5899}],
+
+    ];
+
+//平日到达
+    var BJData4 = [
+        [{name:'北京'}, {name:'北京',value:247569}],
+        [{name:'廊坊'}, {name:'北京',value:118077}],
+        [{name:'保定'}, {name:'北京',value:37858}],
+        [{name:'天津'}, {name:'北京',value:37121}],
+        [{name:'张家口'}, {name:'北京',value:15988}],
+        [{name:'承德'}, {name:'北京',value:11686}],
+        [{name:'唐山'}, {name:'北京',value:9163}],
+        [{name:'石家庄'}, {name:'北京',value:7127}],
+        [{name:'沧州'}, {name:'北京',value:5287}],
+        [{name:'秦皇岛'}, {name:'北京',value:5262}],
+        [{name:'邯郸'}, {name:'北京',value:3206}],
+
+    ]
+    var SHData4 = [
+        [{name:'上海'}, {name:'上海',value:131079}],
+        [{name:'苏州'}, {name:'上海',value:91705}],
+        [{name:'嘉兴'}, {name:'上海',value:11543}],
+        [{name:'杭州'}, {name:'上海',value:6694}],
+        [{name:'南通'}, {name:'上海',value:6683}],
+        [{name:'无锡'}, {name:'上海',value:4565}],
+        [{name:'南京'}, {name:'上海',value:3240}],
+        [{name:'北京'}, {name:'上海',value:2618}],
+        [{name:'宁波'}, {name:'上海',value:2161}],
+        [{name:'常州'}, {name:'上海',value:1870}],
+        [{name:'湖州'}, {name:'上海',value:1781}],
+
+    ];
+    var GZData4 = [
+        [{name:'广州'},{name:'广州',value:221081}],
+        [{name:'佛山'}, {name:'广州',value:130008}],
+        [{name:'东莞'}, {name:'广州',value:30421}],
+        [{name:'深圳'}, {name:'广州',value:19014}],
+        [{name:'清远'}, {name:'广州',value:13119}],
+        [{name:'惠州'}, {name:'广州',value:8053}],
+        [{name:'中山'}, {name:'广州',value:7136}],
+        [{name:'肇庆'}, {name:'广州',value:5802}],
+        [{name:'江门'}, {name:'广州',value:3954}],
+        [{name:'珠海'}, {name:'广州',value:3574}],
+        [{name:'韶关'}, {name:'广州',value:2664}],
+
+    ];
+    var CDData4 = [
+        [{name:'成都'}, {name:'成都',value:56746}],
+        [{name:'德阳'}, {name:'成都',value:13759}],
+        [{name:'眉山'}, {name:'成都',value:10811}],
+        [{name:'资阳'}, {name:'成都',value:9629}],
+        [{name:'重庆'}, {name:'成都',value:5441}],
+        [{name:'绵阳'}, {name:'成都',value:4750}],
+        [{name:'乐山'}, {name:'成都',value:4515}],
+        [{name:'南充'}, {name:'成都',value:2952}],
+        [{name:'雅安'}, {name:'成都',value:2477}],
+        [{name:'遂宁'}, {name:'成都',value:2412}],
+        [{name:'内江'}, {name:'成都',value:2395}],
+
+    ];
+    var WHData4 = [
+        [{name:'武汉'}, {name:'武汉',value:55551}],
+        [{name:'孝感'}, {name:'武汉',value:12902}],
+        [{name:'咸宁'}, {name:'武汉',value:10575}],
+        [{name:'鄂州'}, {name:'武汉',value:10087}],
+        [{name:'黄冈'}, {name:'武汉',value:9239}],
+        [{name:'恩施土家族苗族自治州'}, {name:'武汉',value:4329}],
+        [{name:'黄石'}, {name:'武汉',value:2955}],
+        [{name:'荆州'}, {name:'武汉',value:2668}],
+        [{name:'随州'}, {name:'武汉',value:1556}],
+        [{name:'荆门'}, {name:'武汉',value:1240}],
+        [{name:'襄阳'}, {name:'武汉',value:1231}],
+
+    ];
+
+
+    var planePath = 'path://M.6,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.' +
+            '961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,' +
+            '92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705';
+
+    var convertData = function(data) {
+        var res = [];
+        for (var i = 0; i < data.length; i++) {
+            var dataItem = data[i];
+            var fromCoord = geoCoordMap[dataItem[0].name]; // 出发地的经纬度
+            var toCoord = geoCoordMap[dataItem[1].name]; // 目的地的经纬度
+            if (fromCoord && toCoord) {
+                res.push([{
+                    coord: fromCoord
+                }, {
+                    coord: toCoord
+                }]);
+            }
+        }
+        return res;
+    };
+
+    var color = ['#3ed4ff', '#ffa022', '#a6c84c','#F5BCD2', '#65C0A7', '#9DDCE8', 'D5E143', 'F4BFAA'];
+    var series1 = [];
+    var series2 = [];
+    var series3 = [];
+    var series4 = [];
+    [
+        ['北京', BJData1],
+        ['上海', SHData1],
+        ['广州', GZData1],
+        ['成都', CDData1],
+        ['武汉', WHData1],
+//        ['西安', XAData1],
+//        ['西宁', XNData1],
+    ].forEach(function(item, i) {
+                series1.push(
+                        {
+                    name: item[0] + ' Top10',
+                    type: 'lines',
+                    zlevel: 1,
+                    effect: {
+                        show: true,
+                        period: 6,
+                        trailLength: 0.7,
+                        color: '#fff',
+                        symbolSize: 3
+                    },
+                    lineStyle: {
+                        normal: {
+                            color: color[i],
+                            width: 0,
+                            curveness: 0.2
+                        }
+                    },
+                    data: convertData(item[1])
+                }, {
+                    name: item[0] + ' Top10',
+                    type: 'lines',
+                    zlevel: 2,
+                    effect: {
+                        show: true,
+                        period: 6,
+                        trailLength: 0,
+                        symbol: planePath,
+                        symbolSize: 15
+                    },
+                    lineStyle: {
+                        normal: {
+                            color: color[i],
+                            width: 1,
+                            opacity: 0.4,
+                            curveness: 0.2
+                        }
+                    },
+                    data: convertData(item[1])
+                }, {
+                    name: item[0] + ' Top10',
+                    type: 'effectScatter',
+                    coordinateSystem: 'geo',
+                    zlevel: 2,
+                    rippleEffect: {
+                        brushType: 'stroke'
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'right',
+                            formatter: '{b}'
+                        }
+                    },
+                    symbolSize: function(val) {
+                        return val[2] / 5000;
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: color[i]
+                        }
+                    },
+                    data: item[1].map(function(dataItem) {
+                        return {
+                            name: dataItem[1].name,
+                            value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+                        };
+                    })
+                });
+            });
+    [
+        ['北京', BJData2],
+        ['上海', SHData2],
+        ['广州', GZData2],
+        ['成都', CDData2],
+        ['武汉', WHData2],
+    ].forEach(function(item, i) {
+                series2.push(
+                        {
+                            name: item[0] + ' Top10',
+                            type: 'lines',
+                            zlevel: 1,
+                            effect: {
+                                show: true,
+                                period: 6,
+                                trailLength: 0.7,
+                                color: '#fff',
+                                symbolSize: 3
+                            },
+                            lineStyle: {
+                                normal: {
+                                    color: color[i],
+                                    width: 0,
+                                    curveness: 0.2
+                                }
+                            },
+                            data: convertData(item[1])
+                        }, {
+                            name: item[0] + ' Top10',
+                            type: 'lines',
+                            zlevel: 2,
+                            effect: {
+                                show: true,
+                                period: 6,
+                                trailLength: 0,
+                                symbol: planePath,
+                                symbolSize: 15
+                            },
+                            lineStyle: {
+                                normal: {
+                                    color: color[i],
+                                    width: 1,
+                                    opacity: 0.4,
+                                    curveness: 0.2
+                                }
+                            },
+                            data: convertData(item[1])
+                        }, {
+                            name: item[0] + ' Top10',
+                            type: 'effectScatter',
+                            coordinateSystem: 'geo',
+                            zlevel: 2,
+                            rippleEffect: {
+                                brushType: 'stroke'
+                            },
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'right',
+                                    formatter: '{b}'
+                                }
+                            },
+                            symbolSize: function(val) {
+                                return val[2] / 5000;
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: color[i]
+                                }
+                            },
+                            data: item[1].map(function(dataItem) {
+                                return {
+                                    name: dataItem[1].name,
+                                    value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+                                };
+                            })
+                        });
+            });
+    [
+        ['北京', BJData3],
+        ['上海', SHData3],
+        ['广州', GZData3],
+        ['成都', CDData3],
+        ['武汉', WHData3],
+//        ['西安', XAData1],
+//        ['西宁', XNData1],
+    ].forEach(function(item, i) {
+                series3.push(
+                        {
+                            name: item[0] + ' Top10',
+                            type: 'lines',
+                            zlevel: 1,
+                            effect: {
+                                show: true,
+                                period: 6,
+                                trailLength: 0.7,
+                                color: '#fff',
+                                symbolSize: 3
+                            },
+                            lineStyle: {
+                                normal: {
+                                    color: color[i],
+                                    width: 0,
+                                    curveness: 0.2
+                                }
+                            },
+                            data: convertData(item[1])
+                        }, {
+                            name: item[0] + ' Top10',
+                            type: 'lines',
+                            zlevel: 2,
+                            effect: {
+                                show: true,
+                                period: 6,
+                                trailLength: 0,
+                                symbol: planePath,
+                                symbolSize: 15
+                            },
+                            lineStyle: {
+                                normal: {
+                                    color: color[i],
+                                    width: 1,
+                                    opacity: 0.4,
+                                    curveness: 0.2
+                                }
+                            },
+                            data: convertData(item[1])
+                        }, {
+                            name: item[0] + ' Top10',
+                            type: 'effectScatter',
+                            coordinateSystem: 'geo',
+                            zlevel: 2,
+                            rippleEffect: {
+                                brushType: 'stroke'
+                            },
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'right',
+                                    formatter: '{b}'
+                                }
+                            },
+                            symbolSize: function(val) {
+                                return val[2] / 5000;
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: color[i]
+                                }
+                            },
+                            data: item[1].map(function(dataItem) {
+                                return {
+                                    name: dataItem[0].name,
+                                    value: geoCoordMap[dataItem[0].name].concat([dataItem[1].value])
+                                };
+                            })
+                        });
+            });
+    [
+        ['北京', BJData4],
+        ['上海', SHData4],
+        ['广州', GZData4],
+        ['成都', CDData4],
+        ['武汉', WHData4],
+    ].forEach(function(item, i) {
+                series4.push(
+                        {
+                            name: item[0] + ' Top10',
+                            type: 'lines',
+                            zlevel: 1,
+                            effect: {
+                                show: true,
+                                period: 6,
+                                trailLength: 0.7,
+                                color: '#fff',
+                                symbolSize: 3
+                            },
+                            lineStyle: {
+                                normal: {
+                                    color: color[i],
+                                    width: 0,
+                                    curveness: 0.2
+                                }
+                            },
+                            data: convertData(item[1])
+                        }, {
+                            name: item[0] + ' Top10',
+                            type: 'lines',
+                            zlevel: 2,
+                            effect: {
+                                show: true,
+                                period: 6,
+                                trailLength: 0,
+                                symbol: planePath,
+                                symbolSize: 15
+                            },
+                            lineStyle: {
+                                normal: {
+                                    color: color[i],
+                                    width: 1,
+                                    opacity: 0.4,
+                                    curveness: 0.2
+                                }
+                            },
+                            data: convertData(item[1])
+                        }, {
+                            name: item[0] + ' Top10',
+                            type: 'effectScatter',
+                            coordinateSystem: 'geo',
+                            zlevel: 2,
+                            rippleEffect: {
+                                brushType: 'stroke'
+                            },
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'right',
+                                    formatter: '{b}'
+                                }
+                            },
+                            symbolSize: function(val) {
+                                return val[2] / 5000;
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: color[i]
+                                }
+                            },
+                            data: item[1].map(function(dataItem) {
+                                return {
+                                    name: dataItem[0].name,
+                                    value: geoCoordMap[dataItem[0].name].concat([dataItem[1].value])
+                                };
+                            })
+                        });
+            });
+    var option1 = {
+        // Dom背景颜色
+        backgroundColor: '#080a20',
+        title: {
+            text: '节假日出行数据',
+            subtext: '深圳大学智慧城市研究院',
+            left: 'center',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            top: 'bottom',
+            left: 'right',
+            data: ['北京 Top10', '上海 Top10', '广州 Top10','成都 Top10','武汉 Top10'],
+            selected:{'广州 Top10':false,'成都 Top10':false,'武汉 Top10':false},
+            textStyle: {
+                color: 'F4BFAA'
+            },
+            selectedMode: 'multiple'  // 图例选择的模式：single和multiple分别对应单选和多选
+        },
+        geo: {
+            map: 'china',
+            label: {
+                emphasis: {
+                    // 鼠标触发显示地区名称
+                    show: false
+                }
+            },
+            roam: true,
+            itemStyle: {
+                normal: {
+                    // 正常时地区的颜色
+                    areaColor: '#132937',
+                    borderColor: '#0692a4'
+                },
+                emphasis: {
+                    // 鼠标经过时地区的颜色
+                    areaColor: '#0b1c2d'
+                }
+            }
+        },
+        series: series1	// 调用上面已经填充好的series1
+    };
+    var option2 = {
+        // Dom背景颜色
+        backgroundColor: '#080a20',
+        title: {
+            text: '工作日出行数据',
+            subtext: '深圳大学智慧城市研究院',
+            left: 'center',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            top: 'bottom',
+            left: 'right',
+            data: ['北京 Top10', '上海 Top10', '广州 Top10','成都 Top10','武汉 Top10'],
+            selected:{'广州 Top10':false,'成都 Top10':false,'武汉 Top10':false},
+            textStyle: {
+                color: 'F4BFAA'
+            },
+            selectedMode: 'multiple'  // 图例选择的模式：single和multiple分别对应单选和多选
+        },
+        geo: {
+            map: 'china',
+            label: {
+                emphasis: {
+                    // 鼠标触发显示地区名称
+                    show: false
+                }
+            },
+            roam: true,
+            itemStyle: {
+                normal: {
+                    // 正常时地区的颜色
+                    areaColor: '#132937',
+                    borderColor: '#0692a4'
+                },
+                emphasis: {
+                    // 鼠标经过时地区的颜色
+                    areaColor: '#0b1c2d'
+                }
+            }
+        },
+        series: series2	// 调用上面已经填充好的series1
+    };
+    var option3 = {
+        // Dom背景颜色
+        backgroundColor: '#080a20',
+        title: {
+            text: '节假日到达数据',
+            subtext: '深圳大学智慧城市研究院',
+            left: 'center',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            top: 'bottom',
+            left: 'right',
+            data: ['北京 Top10', '上海 Top10', '广州 Top10','成都 Top10','武汉 Top10'],
+            selected:{'广州 Top10':false,'成都 Top10':false,'武汉 Top10':false},
+            textStyle: {
+                color: 'F4BFAA'
+            },
+            selectedMode: 'multiple'  // 图例选择的模式：single和multiple分别对应单选和多选
+        },
+        geo: {
+            map: 'china',
+            label: {
+                emphasis: {
+                    // 鼠标触发显示地区名称
+                    show: false
+                }
+            },
+            roam: true,
+            itemStyle: {
+                normal: {
+                    // 正常时地区的颜色
+                    areaColor: '#132937',
+                    borderColor: '#0692a4'
+                },
+                emphasis: {
+                    // 鼠标经过时地区的颜色
+                    areaColor: '#0b1c2d'
+                }
+            }
+        },
+        series: series3	// 调用上面已经填充好的series1
+    };
+    var option4 = {
+        // Dom背景颜色
+        backgroundColor: '#080a20',
+        title: {
+            text: '工作日到达数据',
+            subtext: '深圳大学智慧城市研究院',
+            left: 'center',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            top: 'bottom',
+            left: 'right',
+            data: ['北京 Top10', '上海 Top10', '广州 Top10','成都 Top10','武汉 Top10'],
+            selected:{'广州 Top10':false,'成都 Top10':false,'武汉 Top10':false},
+            textStyle: {
+                color: 'F4BFAA'
+            },
+            selectedMode: 'multiple'  // 图例选择的模式：single和multiple分别对应单选和多选
+        },
+        // geo：地理坐标系组件
+        geo: {
+            map: 'china',
+            label: {
+                emphasis: {
+                    // 鼠标触发显示地区名称
+                    show: false
+                }
+            },
+            roam: true,
+            itemStyle: {
+                normal: {
+                    // 正常时地区的颜色
+                    areaColor: '#132937',
+                    borderColor: '#0692a4'
+                },
+                emphasis: {
+                    // 鼠标经过时地区的颜色
+                    areaColor: '#0b1c2d'
+                }
+            }
+        },
+        series: series4	// 调用上面已经填充好的series1
+    };
+    // 5. 使用指定的配置项和数据显示图表
+    firstChart.setOption(option1)
+    secondChart.setOption(option2)
+    thirdChart.setOption(option3)
+    fourthChart.setOption(option4)
+    //捕捉georoam事件，使下层的geo随着上层的geo一起缩放拖曳
+    firstChart.on('georoam',function(params){
+        var option1 = firstChart.getOption();//获得option对象
+        var option2 = secondChart.getOption();//获得option对象
+        var option3 = thirdChart.getOption();//获得option对象
+        var option4 = fourthChart.getOption();//获得option对象
+        if(params.zoom!=null&&params.zoom!=undefined){ //捕捉到缩放时
+            option2.geo[0].zoom=option1.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option2.geo[0].center=option1.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option3.geo[0].zoom=option1.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option3.geo[0].center=option1.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option4.geo[0].zoom=option1.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option4.geo[0].center=option1.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }else{//捕捉到拖曳时
+            option2.geo[0].center=option1.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option3.geo[0].center=option1.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option4.geo[0].center=option1.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }
+//        firstChart.setOption(option1)
+        secondChart.setOption(option2)
+        thirdChart.setOption(option3)
+        fourthChart.setOption(option4)
+    });
+    secondChart.on('georoam',function(params){
+        var option1 = firstChart.getOption();//获得option对象
+        var option2 = secondChart.getOption();//获得option对象
+        var option3 = thirdChart.getOption();//获得option对象
+        var option4 = fourthChart.getOption();//获得option对象
+        if(params.zoom!=null&&params.zoom!=undefined){ //捕捉到缩放时
+            option1.geo[0].zoom=option2.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option1.geo[0].center=option2.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option3.geo[0].zoom=option2.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option3.geo[0].center=option2.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option4.geo[0].zoom=option2.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option4.geo[0].center=option2.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }else{//捕捉到拖曳时
+            option1.geo[0].center=option2.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option3.geo[0].center=option2.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option4.geo[0].center=option2.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }
+        firstChart.setOption(option1)
+//        secondChart.setOption(option1)
+        thirdChart.setOption(option3)
+        fourthChart.setOption(option4)
+    });
+    thirdChart.on('georoam',function(params){
+        var option1 = firstChart.getOption();//获得option对象
+        var option2 = secondChart.getOption();//获得option对象
+        var option3 = thirdChart.getOption();//获得option对象
+        var option4 = fourthChart.getOption();//获得option对象
+        if(params.zoom!=null&&params.zoom!=undefined){ //捕捉到缩放时
+            option2.geo[0].zoom=option3.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option2.geo[0].center=option3.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option1.geo[0].zoom=option3.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option1.geo[0].center=option3.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option4.geo[0].zoom=option3.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option4.geo[0].center=option3.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }else{//捕捉到拖曳时
+            option2.geo[0].center=option3.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option1.geo[0].center=option3.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option4.geo[0].center=option3.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }
+        firstChart.setOption(option1)
+        secondChart.setOption(option2)
+//        thirdChart.setOption(option3)
+        fourthChart.setOption(option4)
+    });
+    fourthChart.on('georoam',function(params){
+        var option1 = firstChart.getOption();//获得option对象
+        var option2 = secondChart.getOption();//获得option对象
+        var option3 = thirdChart.getOption();//获得option对象
+        var option4 = fourthChart.getOption();//获得option对象
+        if(params.zoom!=null&&params.zoom!=undefined){ //捕捉到缩放时
+            option2.geo[0].zoom=option4.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option2.geo[0].center=option4.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option3.geo[0].zoom=option4.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option3.geo[0].center=option4.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option1.geo[0].zoom=option4.geo[0].zoom;//下层geo的缩放等级跟着上层的geo一起改变
+            option1.geo[0].center=option4.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }else{//捕捉到拖曳时
+            option2.geo[0].center=option4.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option3.geo[0].center=option4.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+            option1.geo[0].center=option4.geo[0].center;//下层的geo的中心位置随着上层geo一起改变
+        }
+        firstChart.setOption(option1)
+        secondChart.setOption(option2)
+        thirdChart.setOption(option3)
+//        fourthChart.setOption(option4)
+    });
+</script>
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-6c54"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">深圳大学智慧城市研究院出品</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://szu.edu.cn" target="_blank">
+        <span>网站</span>
+      </a>
+      <p class="u-text">
+        <span>创建</span>
+      </p>
+      <a class="u-link" href="https://szu.edu.cn" target="_blank">
+        <span>深圳大学</span>
+      </a>. 
+    </section>
+  </body>
+</html>
